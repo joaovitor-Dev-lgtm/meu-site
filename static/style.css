@@ -67,3 +67,26 @@ form[action="/login"] {
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+form[action="/login"] input {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+form[action="/login"] button {
+    background: #28a745;
+}
+form[action="/login"] button:hover {
+    background: #218838;
+}
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    font-size: 14px;
+    margin-top: 40px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
