@@ -12,6 +12,7 @@ function mostrarDetalhes(modelo, ano, cambio, combustivel) {
         <button onclick="fecharDetalhes()">Fechar</button>
     `;
     detalhes.style.display = 'block';
+    detalhes.scrollIntoView({ behavior: 'smooth' });
 }
 
 function fecharDetalhes() {
