@@ -8,7 +8,13 @@
 </head>
 <body>
     <header>
-        <h1>Loja de Carros</h1>
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <input type="text" name="usuario" placeholder="Usuário" required>
+        <input type="password" name="senha" placeholder="Senha" required>
+        <button type="submit">Entrar</button>
+    </form>
+        <h1>Loja de Carro</h1>
         <nav>
             <a href="#">Home</a>
             <a href="#">Estoque</a>
@@ -31,15 +37,6 @@
             </div>
         </section>
         <section id="detalhes" class="detalhes"></section>
-        <div class="overlay" id="overlay">
-            <div class="detalhes-conteudo">
-                <span class="fechar" id="fechar">&times;</span>
-                <h2 id="modelo"></h2>
-                <p><strong>Ano:</strong> <span id="ano"></span></p>
-                <p><strong>Transmissão:</strong> <span id="transmissao"></span></p>
-                <p><strong>Combustível:</strong> <span id="combustivel"></span></p>
-            </div>
-        </div>
     </main>
     <footer>
         <p>&copy; 2025 Loja de Carros</p>
