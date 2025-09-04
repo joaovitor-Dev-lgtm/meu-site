@@ -56,26 +56,26 @@ button:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     display: none;
 }
-form[action="/login"] {
+form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin: 20px auto;
     width: 300px;
+    margin: 20px auto;
     background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-form[action="/login"] input {
+form input {
+    margin-bottom: 15px;
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
-form[action="/login"] button {
+form button {
     background: #28a745;
 }
-form[action="/login"] button:hover {
+form button:hover {
     background: #218838;
 }
 footer {
@@ -89,4 +89,27 @@ footer {
     margin-top: 40px;
     box-sizing: border-box;
     z-index: 1000;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+/* Estilos específicos para o formulário de login */
+.login-header {
+    background: #444;
+    padding: 30px 20px;
+}
+.login-header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+/* Estilos específicos para o rodapé */
+footer {
+    font-size: 13px;
+}
+footer p {
+    margin: 5px 0;
 }
