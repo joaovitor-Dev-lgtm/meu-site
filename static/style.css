@@ -97,7 +97,6 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-/* Estilos específicos para o formulário de login */
 .login-header {
     background: #444;
     padding: 30px 20px;
@@ -106,7 +105,6 @@ footer a:hover {
     margin: 0;
     font-size: 28px;
 }
-/* Estilos específicos para o rodapé */
 footer {
     font-size: 13px;
 }
