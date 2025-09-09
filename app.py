@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 
 app = Flask(__name__)
-app.secret_key = 'sua_chave_secreta'
+app.secret_key = 'minha_chave_secreta'  # Necessário para usar sessões
 
 usuarios = {'admin': '123'}
+usuarios['joao'] = '222'
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -13,7 +14,7 @@ def login():
         senha = request.form['senha']
         if usuario in usuarios and usuarios[usuario] == senha:
             session['usuario'] = usuario
-            return redirect(url_for('home'))
+            return redirect(url_for('index'))
         else:
             erro = 'Usuário ou senha incorretos.'
     return render_template('login.html', erro=erro)
@@ -24,7 +25,14 @@ def logout():
     return redirect(url_for('login'))
 
 @app.route('/')
-def home():
-    if not session.get('usuario'):
-        return redirect(url_for('login'))
-    return render_template('index.html')
+def index():
+    if 'usuario' in session:
+        return render_template('index.html', usuario=session['usuario'])
+    return redirect(url_for('login'))
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+# ADICIONA O BANCO DE DADOS PARA SALVAR OS USUARIOS
+# UTILIZA O SQLALCHMY PARA GERENCIAR O BANCO DE DADOS
