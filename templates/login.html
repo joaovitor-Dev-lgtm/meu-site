@@ -1,15 +1,17 @@
 <body class="login-body">
-
-    <a href="index.html" class="volta222">Voltar</a>
+    <nav>
+        <a href="index.html" class="volta222">Voltar</a>
+    </nav>
 
     <header class="login-header">
         <h1>Login</h1>
-        <form method="post" action="{{ url_for('login') }}">
+            <form method="post" action="{{ url_for('login') }}">
+            
             <input class="usuario" type="text" name="usuario" placeholder="Usuário" required>
             <input class="password" type="password" name="senha" placeholder="Senha" required>
             <button type="submit">Entrar</button>
-            <link rel="stylesheet" href="/static/style.css">
-        </form>
+                <link rel="stylesheet" href="/static/style.css">
+            </form>
     </header>
     <script src="/static/login.js"></script>
 </body>
