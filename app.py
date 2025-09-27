@@ -30,6 +30,10 @@ def index():
         return render_template('index.html', usuario=session['usuario'])
     return redirect(url_for('login'))
 
+@app.route('/voltar')
+def volta222():
+    return redirect(url_for('index'))
+
 if __name__ == '__main__':
     app.run(debug=True)
 
