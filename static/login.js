@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.querySelector('.loginn-form');
+    const form = document.querySelector('.login-form');
     if (form) {
         form.addEventListener('submit', function (e) {
             const usuario = form.usuario.value.trim();
